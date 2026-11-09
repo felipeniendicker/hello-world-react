@@ -1,0 +1,89 @@
+.page {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 32px 20px;
+  background:
+    radial-gradient(ellipse at 20% 15%, #122e46 0%, transparent 42%),
+    radial-gradient(ellipse at 85% 82%, #20245a 0%, transparent 45%),
+    #0b1222;
+}
+
+.ambient {
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ffffff0d;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.ambient-one { top: -230px; right: -60px; }
+.ambient-two { bottom: -290px; left: -110px; width: 560px; height: 560px; }
+
+.content {
+  width: min(100%, 760px);
+  padding: clamp(32px, 8vw, 72px) clamp(22px, 6vw, 66px);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(21,33,56,.92), rgba(13,20,38,.92));
+  box-shadow: 0 30px 100px #00000050, inset 0 1px #ffffff0d;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 9px 14px;
+  border: 1px solid #78dce83b;
+  border-radius: 999px;
+  background: #38bdf811;
+  color: #99dff4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #56e2c3; box-shadow: 0 0 15px #56e2c3; }
+.symbol {
+  display: grid;
+  width: 78px;
+  height: 78px;
+  margin: 34px auto 26px;
+  place-items: center;
+  border: 1px solid #4fe1cf66;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #164459, #16334c);
+  color: #74efd9;
+  box-shadow: 0 12px 35px #071b2b88;
+  transform: rotate(-5deg);
+}
+.symbol span { font-family: 'Space Grotesk', monospace; font-size: 24px; font-weight: 700; transform: rotate(5deg); }
+.kicker { margin: 0 0 12px; color: #8ca3bd; font-size: 14px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.heading-wrap { margin: 0 auto; }
+h1 {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(38px, 7.4vw, 66px);
+  font-weight: 700;
+  letter-spacing: -.052em;
+  line-height: 1.12;
+  text-wrap: balance;
+  background: linear-gradient(110deg, #fff 15%, #a4cde8 65%, #65e8d7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.description { max-width: 430px; margin: 24px auto 29px; color: #a3b2c7; font-size: 16px; line-height: 1.7; }
+.tech { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px; }
+.tech span { padding: 7px 12px; border: 1px solid #ffffff1e; border-radius: 8px; color: #abbcd1; background: #ffffff08; font-size: 12px; font-weight: 700; }
+@media (max-width: 480px) {
+  .content { border-radius: 20px; }
+  .symbol { width: 65px; height: 65px; margin-top: 30px; }
+  .description { font-size: 14px; }
+}
